@@ -17,6 +17,8 @@ add_definitions(-DBUILDING_LIB)
 
 include_directories(include)
 
+set(CMAKE_CXX_FLAGS "-static-libstdc++ -static-libgcc -mabi=sysv")
+
 add_library(c_api SHARED src/c_api.c)
 add_executable(c_api_test test/c_api_test.c)
 target_link_libraries(c_api_test c_api)

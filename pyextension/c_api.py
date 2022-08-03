@@ -1,6 +1,7 @@
 from ctypes import CDLL
 import sys
 
+print(sys.prefix)
 
 _flat_lib = None
 if sys.platform == "win32":
